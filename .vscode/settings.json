@@ -6,7 +6,11 @@
         "**/.hg": true,
         "**/CVS": true,
         "**/.DS_Store": true,
-        "venv":true
+        "*.pyc":true,
+        "**/__pycache__":true,
+        "**/*py[ocw]":true,
+        "**/*db":true,
+        "**/*sqlite3":true
     },
-    "python.pythonPath": "${workspaceRoot}/venv/bin/python"
+    "python.pythonPath": "${workspaceRoot}/venv/bin/python",
 }

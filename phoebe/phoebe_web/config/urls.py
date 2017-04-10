@@ -1,4 +1,4 @@
-"""djphoebe URL Configuration
+"""phoebe_web URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.11/topics/http/urls/
@@ -20,7 +20,7 @@ from django.contrib import admin
 
 from rest_framework_nested import routers
 
-from djphoebe.authentication.views import AccountViewSet
+from phoebe_web.authentication.views import AccountViewSet
 
 router = routers.SimpleRouter()
 router.register(r'accounts', AccountViewSet)
