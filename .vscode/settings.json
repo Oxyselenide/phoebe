@@ -10,6 +10,7 @@
         "**/__pycache__":true,
         "**/*py[ocw]":true,
         "**/*db":true,
+        "venv":true,
         "**/*sqlite3":true
     },
     "python.pythonPath": "${workspaceRoot}/venv/bin/python",

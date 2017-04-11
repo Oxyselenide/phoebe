@@ -21,6 +21,7 @@ from django.contrib import admin
 from rest_framework_nested import routers
 
 from phoebe_web.authentication.views import AccountViewSet
+from phoebe_web.indexview import IndexView
 
 router = routers.SimpleRouter()
 router.register(r'accounts', AccountViewSet)
@@ -28,5 +29,5 @@ router.register(r'accounts', AccountViewSet)
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^api/v1/', include(router.urls)),
-    #url('^.*$', IndexView.as_view(), name='index'),
+    url('^.*$', IndexView.as_view(), name='index'),
 ]

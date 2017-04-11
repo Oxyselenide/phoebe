@@ -1,4 +1,6 @@
-from rest_framework import permissions, viewsets
+from django.views.static import HttpResponse
+from rest_framework import permissions, viewsets,status
+from rest_framework.response import Response
 
 from .models import Account
 from .serializers import AccountSerializer
@@ -29,6 +31,7 @@ class AccountViewSet(viewsets.ModelViewSet):
         serializer = self.serializer_class(data=request.data)
 
         if serializer.is_valid():
+            del serializer.validated_data['confirm_password']
             Account.objects.create_user(**serializer.validated_data)
 
             return Response(serializer.validated_data, status=status.HTTP_201_CREATED)

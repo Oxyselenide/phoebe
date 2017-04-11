@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'phoebe_web.authentication'
+    'rest_framework',
+    'phoebe_web.authentication',
 ]
 
 MIDDLEWARE = [

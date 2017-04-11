@@ -10,7 +10,6 @@ class AccountManager(BaseUserManager):
         if not username:
             raise ValueError('Users must have a valid username.')
 
-        print("extra_fields",extra_fields)
         account = self.model(
             email=self.normalize_email(email), username=username, **extra_fields
         )

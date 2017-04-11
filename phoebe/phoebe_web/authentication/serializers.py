@@ -18,9 +18,13 @@ class AccountSerializer(serializers.ModelSerializer):
         read_only_fields = ('created_at','updated_at',)
 
         def create(self, validated_data):
-            return Account.objects.create(**validated_data)
+            raise Exception('for testing'+str(validated_data))
+            print( 'ser',validated_data)
+            #assert (validated_data.get(password) == validated_data.get(confirm_password))
+            #return Account.objects.create(**validated_data)
 
         def update(self, instance, validated_data):
+            raise Exception('for testing update'+str(validated_data))
             instance.username = validated_data.get('username', instance.username)
             instance.first_name = validated_data.get('first_name', instance.first_name)
 
