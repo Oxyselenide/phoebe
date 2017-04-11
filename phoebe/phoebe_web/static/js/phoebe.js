@@ -1,6 +1,16 @@
-angular
-  .module('phoebe')
-  .run(run);
+(function () {
+  'use strict';
+
+  angular
+    .module('phoebe', [
+      'phoebe.routes',
+      'phoebe.authentication'
+    ]);
+
+  angular
+    .module('phoebe.routes', ['ngRoute']);
+})();
+
 
 run.$inject = ['$http'];
 
@@ -12,3 +22,4 @@ function run($http) {
   $http.defaults.xsrfHeaderName = 'X-CSRFToken';
   $http.defaults.xsrfCookieName = 'csrftoken';
 }
+
