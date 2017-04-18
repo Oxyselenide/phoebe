@@ -1,26 +1,41 @@
-<nav class="navbar navbar-default" role="navigation" ng-controller="NavbarController">
+{% load staticfiles %}
+
+<nav class="navbar navbar-default navbar-static-top" role="navigation" ng-controller="NavbarController">
   <div class="container-fluid">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#not-google-plus-nav">
+      <!--TODO: side bar as collapse-->
+      <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#not-google-plus-nav">
         <span class="sr-only">Toggle Navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/">TEst navbar</a>
-    </div> <!-- ./navbar-header -->
+      </button>-->
+      <a class="navbar-brand" href="/">Phoebe devel</a>
+    </div>
+    <!-- ./navbar-header -->
 
-    <div class="collapse navbar-collapse" id="not-google-plus-nav">
-      <ul class="nav navbar-nav pull-right">
-        {% if user.is_authenticated %}
-          <li><a href="/+{{ user.username }}">+{{ user.username }}</a></li>
-          <li><a href="/+{{ user.username }}/settings">Settings</a></li>
-          <li><a href="javascript:void(0)" ng-click="logout()">Logout</a></li>
+    <ul class="nav navbar-top-links navbar-right">
 
-        {% else %}
-          <h1> you should not be here</h1>
-        {% endif %}
-      </ul>
-    </div> <!-- /.collapse.navbar-collapse -->
-  </div> <!-- /.container-fluid -->
+      <li class="dropdown" id="dropdown-user">
+        <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+          <img src="{% static 'assets/user.svg' %}" alt="" style="width: 30px;height: 30px;border-radius: 50%;">
+          <b class="hidden-xs hidden-sm"> {{ user.username }} </b>
+          <i class="fa fa-caret-down"></i>
+        </a>
+        <ul class="dropdown-menu dropdown-user">
+          <li><a href="#"><i class="fa fa-user fa-fw"></i> Profile</a>
+          </li>
+          <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a href="javascript:void(0)" ng-click="logout()">
+              <i class="fa fa-sign-out fa-fw"></i> Logout</a>
+          </li>
+        </ul>   <!-- /.dropdown-user -->
+
+      </li>
+    </ul>
+
+    
 </nav>
