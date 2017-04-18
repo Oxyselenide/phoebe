@@ -6,17 +6,10 @@
 </head>
 
 <body>
-  {% include 'navbar.html' %}
-  <!--<div class="container-fluid">
-    <div class="row">
-      <div class="col-xs-12 ng-view">
-        
-      </div>
-    </div>
-  </div>-->
-  
-  {% include 'javascripts.html' %}
 
+ {% include 'authentication/login.html' %}
+  
+ {% include 'javascripts.html' %}
 
 <script>
  angular.module('phoebe').controller('ctrl',ctrl)

@@ -89,3 +89,5 @@ ENV/
 .ropeproject
 
 migrations/
+
+phoebe/phoebe_web/templates/tmp/

@@ -130,3 +130,5 @@ STATICFILES_DIRS = (
     # TODO: will add templates to url
     os.path.join(BASE_DIR, 'templates')
 )
+
+LOGIN_REDIRECT_URL = '/loginsuccess'

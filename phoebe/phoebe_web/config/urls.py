@@ -20,7 +20,7 @@ from django.contrib import admin
 
 from rest_framework_nested import routers
 
-from phoebe_web.authentication.views import AccountViewSet
+from phoebe_web.authentication.views import AccountViewSet,LoginApiView,LoginView
 from phoebe_web.index import IndexView
 
 router = routers.SimpleRouter()
@@ -29,5 +29,7 @@ router.register(r'accounts', AccountViewSet)
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^api/v1/', include(router.urls)),
+    url(r'^api/v1/auth/login/$', LoginApiView.as_view(), name='loginapi'),
+    url(r'^accounts/login/$',LoginView.as_view(), name='loginview'),
     url('^$', IndexView.as_view(), name='index'),
 ]

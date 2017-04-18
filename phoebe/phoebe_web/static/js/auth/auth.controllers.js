@@ -12,6 +12,8 @@
 
         function login(){
           var a=  Authentication.login($scope.user, $scope.password)
+          
+          alert(a.status)
           $scope.error = a.status
         }
     }

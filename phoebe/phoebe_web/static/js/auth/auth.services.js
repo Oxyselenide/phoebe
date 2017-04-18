@@ -5,16 +5,15 @@
             .factory('Authentication', Authentication)
 
     Authentication.$inject = ['$http'];
-    /* factory method of authentication
-    */
     function Authentication($http) {
-        var services = {
+        var service = {
             login: login,
            // register: register,
            // logout: logout
         }
-        return services;
+        return service;
 
+        ////////////////
         function login(user, password) {
             return $http.post('/api/v1/auth/login/', {
                     user: user,
@@ -24,17 +23,12 @@
         }
     }
 
-    /*
-    */
 
     function loginSuccessFn(data, status, headers, config) {
         // Authentication.setAuthenticatedAccount(data.data);
-
-        // window.location = '/';
-        alert(data)
+        //window.location = '/index.html';
     }
     function loginErrorFn(data, status, headers, config) {
-        alert(data)
         console.error('Epic failure!');
     }
 
