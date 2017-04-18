@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="phoebe" ng-controller="ctrl">
+<html ng-app="phoebe">
 <head>
   <title>phoebe-devel</title>
   {% include 'stylesheets.html' %}
@@ -11,15 +11,5 @@
   
  {% include 'javascripts.html' %}
 
-<script>
- angular.module('phoebe').controller('ctrl',ctrl)
- function ctrl($scope){
-   $scope.error = 0
-   $scope.login = (a)=>{
-     alert($scope.user + "  " +$scope.password)
-   }
- }
-
-</script>
 </body>
 </html>

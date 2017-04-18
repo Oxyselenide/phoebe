@@ -44,7 +44,7 @@ class AccountViewSet(viewsets.ModelViewSet):
 
 
 import re,json
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login,logout
 from .models import Account
 class LoginApiView(views.APIView):
     def post(self, request, format=None):
@@ -83,10 +83,19 @@ class LoginApiView(views.APIView):
             }, status=status.HTTP_401_UNAUTHORIZED)
 
 
+class LogoutView(views.APIView):
+    permission_classes = (permissions.IsAuthenticated,)
+
+    def post(self, request, format=None):
+        logout(request)
+
+        return Response({}, status=status.HTTP_204_NO_CONTENT)
+
 #TODO: remove these to dynamic index view.
 from django.views.generic.base import TemplateView
 from django.utils.decorators import method_decorator
 from django.views.decorators.csrf import ensure_csrf_cookie
+
 class LoginView(TemplateView):
     template_name = 'login.html'
 
