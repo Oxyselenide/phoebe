@@ -1,21 +1,33 @@
 <!DOCTYPE html>
-<html ng-app="phoebe">
+<html ng-app="phoebe" ng-controller="ctrl">
 <head>
-  <title>phoebe-django-angular-boilerplate</title>
-
-  <base href="/" />
+  <title>phoebe-devel</title>
   {% include 'stylesheets.html' %}
 </head>
 
 <body>
-  {% include 'navbar.html' %}
-
-  <div class="container-fluid">
+  <!--{% include 'navbar.html' %-->
+ {% include 'authentication/login.html' %}
+  <!--<div class="container-fluid">
     <div class="row">
-      <div class="col-xs-12 ng-view"></div>
+      <div class="col-xs-12 ng-view">
+        
+      </div>
     </div>
-  </div>
-
+  </div>-->
+  
   {% include 'javascripts.html' %}
+
+
+<script>
+ angular.module('phoebe').controller('ctrl',ctrl)
+ function ctrl($scope){
+   $scope.error = 0
+   $scope.login = (a)=>{
+     alert($scope.user + "  " +$scope.password)
+   }
+ }
+
+</script>
 </body>
 </html>
