@@ -16,3 +16,23 @@
         }
     }
 })();
+
+
+// sidebar controller
+
+(function() {
+'use strict';
+
+    angular
+        .module('phoebe.layout')
+        .controller('SidebarController', SidebarController);
+
+    SidebarController.inject = ['$scope'];
+    function SidebarController($scope) {
+        activateMetisMenu()
+
+        function activateMetisMenu(){
+            $('#side-menu').metisMenu();
+        }
+    }
+})();
