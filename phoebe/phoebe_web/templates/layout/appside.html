@@ -1,0 +1,394 @@
+{% load staticfiles %}
+<!-- saved from url=(0087)#blank-one-col.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Side Menu</title>
+        <!-- END: theme main stylesheet files -->
+
+         <!--begin pace.js  -->
+        <!--<link rel="stylesheet" href="./Acme - One Column Content_files/pace-theme-minimal.css">-->
+        <!--<script src="./Acme - One Column Content_files/pace.js.download"></script>-->
+        <!-- END: pace.js  -->
+
+    </head>
+
+    <body class="app-side-opened  pace-done">
+		<div class="pace  pace-inactive"><div class="pace-progress" data-progress-text="100%" data-progress="99" style="transform: translate3d(100%, 0px, 0px);">
+                <div class="pace-progress-inner"></div>
+            </div>
+            <div class="pace-activity"></div></div>
+        <!-- begin .app -->
+        <div class="app">
+            <!-- begin .app-wrap -->
+            <div class="app-wrap">
+
+			
+                    <!-- begin .navbar -->
+                    <nav class="navbar navbar-default navbar-static-top shadow-2dp">
+                        <div class="navbar-header">
+                            <nav class="nav navbar-header-nav">
+                                <a class="visible-xs b-r side_menu_btn" id="collapse1" href="#">
+                                    <i class="fa fa-fw fa-bars"></i>
+                                </a>
+                                <a class="hidden-xs b-r side_menu_btn" id="mini" href="#">
+                                    <i class="fa fa-fw fa-bars"></i>
+                                </a>
+                            </nav>
+                       </div>
+                    </nav>
+                    <!-- END: .navbar -->
+
+			
+			
+                <!-- begin .app-container -->
+                <div class="app-container">
+
+                    <!-- begin .app-side -->
+                    <aside class="app-side" ng-controller="SidebarController">
+                        <!-- begin .side-content -->
+                        <div class="side-content">
+                            <!-- begin user-panel -->
+                            <div class="user-panel">
+                                <div class="user-image">
+                                    <a href="#blank-one-col.html#">
+                                        <img class="img-circle" src="{% static 'assets/login-logo.png' %}" alt="John Doe">
+                                    </a>
+                                </div>
+                                <div class="user-info">
+                                    <h5>John Doe</h5>
+                                    <ul class="nav">
+                                        <li class="dropdown">
+                                            <a href="#blank-one-col.html#" class="text-turquoise small dropdown-toggle bg-transparent" data-toggle="dropdown">
+                                                <i class="fa fa-fw fa-circle">
+                                                </i> Online
+                                            </a>
+                                            <ul class="dropdown-menu animated flipInY pull-right">
+                                                <li>
+                                                    <a href="#blank-one-col.html#">Profile</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#blank-one-col.html#">Contacts</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#blank-one-col.html#">Mail Box</a>
+                                                </li>
+                                                <li role="separator" class="divider"></li>
+                                                <li>
+                                                    <a href="#blank-one-col.html#">
+                                                        <i class="fa fa-fw fa-sign-out"></i> Logout
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- END: user-panel -->
+                            <!-- begin .side-nav -->
+                            <nav class="side-nav">
+                                <!-- BEGIN: nav-content -->
+                                <ul class="metismenu nav nav-inverse nav-bordered nav-stacked">
+
+                                    <li class="nav-header">MAIN</li>
+
+                                    <li>
+                                        <a href="#index.html">
+                                            <span class="nav-icon">
+                                                <i class="fa fa-fw fa-cogs"></i>
+                                            </span>
+                                            <span class="nav-title">Dashboard</span>
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-divider"></li>
+                                    <li class="nav-header">Components</li>
+
+                                    <!-- BEGIN: chart -->
+                                    <li>
+                                        <a href="javascript:;">
+                                            <span class="nav-icon">
+                                                <i class="fa fa-fw fa-bar-chart-o"></i>
+                                            </span>
+                                            <span class="nav-title">Chart</span>
+                                            <span class="nav-tools">
+                                                <i class="fa fa-fw arrow"></i>
+                                                <span class="label label-primary">4</span>
+                                            </span>
+                                        </a>
+                                        <ul class="nav nav-sub nav-stacked collapse" aria-expanded="false">
+                                            <li>
+                                                <a href="#chart-quick.html">Quick Chart</a>
+                                            </li>
+                                            <li>
+                                                <a href="#chart-chartjs.html">Chart.js</a>
+                                            </li>
+                                            <li>
+                                                <a href="#chart-morris.html">Morris</a>
+                                            </li>
+                                            <li>
+                                                <a href="#chart-flot.html">Flot</a>
+                                            </li>
+                                            <li>
+                                                <a href="#chart-inline.html">Inline charts</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <!-- END: chart -->
+
+                                    <!-- BEGIN: maps -->
+                                    <li>
+                                        <a href="javascript:;">
+                                            <span class="nav-icon">
+                                                <i class="fa fa-fw fa-map"></i>
+                                            </span>
+                                            <span class="nav-title">Maps</span>
+                                            <span class="nav-tools">
+                                                <i class="fa fa-fw arrow"></i>
+                                            </span>
+                                        </a>
+                                        <ul class="nav nav-sub nav-stacked collapse" aria-expanded="false">
+                                            <li>
+                                                <a href="#map-google.html">Google Maps</a>
+                                            </li>
+                                            <li>
+                                                <a href="#map-vector.html">Vector Maps</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <!-- END: maps -->
+
+                                    <!-- BEGIN: ui -->
+                                    <li>
+                                        <a href="javascript:;">
+
+                                            <span class="nav-icon">
+                                                <i class="fa fa-fw fa-tachometer"></i>
+                                            </span>
+                                            <span class="nav-title">UI</span>
+                                            <span class="nav-tools">
+                                                <i class="fa fa-fw arrow"></i>
+                                            </span>
+                                        </a>
+                                        <ul class="nav nav-sub nav-stacked collapse" aria-expanded="false">
+                                            <li>
+                                                <a href="#ui-general.html">General</a>
+                                            </li>
+                                            <li>
+                                                <a href="#ui-font.html">Font</a>
+                                            </li>
+                                            <li>
+                                                <a href="#ui-widgets.html">Widgets</a>
+                                            </li>
+                                            <li>
+                                                <a href="#ui-loaders.html">Loaders</a>
+                                            </li>
+                                            <li>
+                                                <a href="#ui-momentum.html">Momentum</a>
+                                            </li>
+                                            <li>
+                                                <a href="#ui-nav.html">Nav</a>
+                                            </li>
+                                            <li>
+                                                <a href="#ui-todo.html">Todo</a>
+                                            </li>
+                                            <li>
+                                                <a href="#ui-mega.html">Mega Menu</a>
+                                            </li>
+                                            <li>
+                                                <a href="#ui-tab.html">Tab</a>
+                                            </li>
+                                            <li>
+                                                <a href="#ui-color.html">Colors</a>
+                                            </li>
+                                            <li>
+                                                <a href="#ui-button.html">Buttons</a>
+                                            </li>
+                                            <li>
+                                                <a href="#ui-canvas.html">Canvas</a>
+                                            </li>
+                                            <li>
+                                                <a href="#ui-slider.html">Slider</a>
+                                            </li>
+                                            <li>
+                                                <a href="#ui-timeline.html">Timeline</a>
+                                            </li>
+
+                                            <!-- BEGIN: icon -->
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="nav-title">Icons</span>
+                                                    <span class="nav-tools">
+                                                        <i class="fa fa-fw arrow"></i>
+                                                    </span>
+                                                </a>
+                                                <ul class="nav nav-sub nav-stacked collapse" aria-expanded="false">
+                                                    <li>
+                                                        <a href="#ui-icon-awesome.html">
+                                                            <span class="nav-icon">
+                                                                <i class="fa fa-fw fa-font-awesome"></i>
+                                                            </span>
+                                                            <span class="nav-title">Font Awesome</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#ui-icon-glyphicon.html">
+                                                            <span class="nav-icon">
+                                                                <i class="glyphicon glyphicon-fire"></i>
+                                                            </span>
+                                                            <span class="nav-title">Glyphicons</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <!-- END: icon -->
+                                        </ul>
+                                    </li>
+                                    <!-- END: ui -->
+
+                                    <!-- BEGIN: forms -->
+                                    <li>
+                                        <a href="javascript:;">
+                                            <span class="nav-icon">
+                                                <i class="fa fa-fw fa-edit"></i>
+                                            </span>
+                                            <span class="nav-title">Forms</span>
+                                            <span class="nav-tools">
+                                                <i class="fa fa-fw arrow"></i>
+                                            </span>
+                                        </a>
+                                        <ul class="nav nav-sub nav-stacked collapse" aria-expanded="false">
+                                            <li>
+                                                <a href="#form-basic.html">Basic</a>
+                                            </li>
+                                            <li>
+                                                <a href="#form-advanced.html">Advanced</a>
+                                            </li>
+                                            <li>
+                                                <a href="#form-wizard.html">Wizard</a>
+                                            </li>
+                                            <li>
+                                                <a href="#form-upload.html">File Upload</a>
+                                            </li>
+                                            <li>
+                                                <a href="#form-editor.html">Text Editor</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <!-- END: forms -->
+
+                                    <!-- BEGIN: table -->
+                                    <li>
+                                        <a href="javascript:;">
+                                            <span class="nav-icon">
+                                                <i class="fa fa-fw fa-table"></i>
+                                            </span>
+                                            <span class="nav-title">Table</span>
+                                            <span class="nav-tools">
+                                                <i class="fa fa-fw arrow"></i>
+                                            </span>
+                                        </a>
+                                        <ul class="nav nav-sub nav-stacked collapse" aria-expanded="false">
+                                            <li>
+                                                <a href="#table-basic.html">Basic</a>
+                                            </li>
+                                            <li>
+                                                <a href="#table-sortable.html">Sortable</a>
+                                            </li>
+                                            <li>
+                                                <a href="#table-datatable.html">Datatables</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <!-- END: table -->
+
+                                    <!-- BEGIN: apps -->
+                                    <li>
+                                        <a href="javascript:;">
+                                            <span class="nav-icon">
+                                                <i class="fa fa-fw fa-pagelines"></i>
+                                            </span>
+                                            <span class="nav-title">App</span>
+                                            <span class="nav-tools">
+                                                <i class="fa fa-fw arrow"></i>
+                                            </span>
+                                        </a>
+                                        <ul class="nav nav-sub nav-stacked collapse" aria-expanded="false">
+                                            <li>
+                                                <a href="#app-calendar.html">Calendar</a>
+                                            </li>
+                                            <li>
+                                                <a href="#app-gallery.html">Gallery</a>
+                                            </li>
+                                            <li>
+                                                <a href="#app-login.html">Login</a>
+                                            </li>
+                                            <li>
+                                                <a href="#app-register.html">Register</a>
+                                            </li>
+                                            <li>
+                                                <a href="#app-forgot.html">Forgot</a>
+                                            </li>
+                                            <li>
+                                                <a href="#app-404.html">404</a>
+                                            </li>
+                                            <li>
+                                                <a href="#app-500.html">500</a>
+                                            </li>
+
+                                            <!-- BEGIN: mail -->
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="nav-icon">
+                                                        <i class="fa fa-fw fa-envelope-o"></i>
+                                                    </span>
+                                                    <span class="nav-title">Mail</span>
+                                                    <span class="nav-tools">
+                                                        <i class="fa fa-fw arrow"></i>
+                                                    </span>
+                                                </a>
+                                                <ul class="nav nav-sub nav-stacked collapse" aria-expanded="false">
+                                                    <li>
+                                                        <a href="#app-mail-inbox.html">Inbox</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#app-mail-compose.html">Compose</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#app-mail-read.html">Read</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <!-- END: mail -->
+                                        </ul>
+                                    </li>
+                                    <!-- BEGIN: apps -->
+
+                                </ul>
+                                <!-- END: nav-content -->
+                            </nav>
+                            <!-- END: .side-nav -->
+                        </div>
+                        <!-- END: .side-content -->
+                    </aside>
+                    <!-- END: .app-side -->
+
+                    <!-- begin side-collapse-visible bar -->
+                    <div class="side-visible-line hidden-xs side_menu_btn" id="collapse2">
+                        <i class="fa fa-caret-left"></i> 
+                    </div>
+                    <!-- begin side-collapse-visible bar -->
+
+                </div>
+                <!-- END: .app-container -->
+
+            </div>
+            <!-- END: .app-wrap -->
+        </div>
+        <!-- END: .app -->
+
+        <span class="fa fa-angle-up" id="totop" data-plugin="totop"></span>
+    </body>
+</html>
